@@ -45,7 +45,7 @@ const SignUp = () => {
   };
   const loginWithGoogle = () => {
     localStorage.clear();
-    window.open("http://localhost:8000/auth/google/callback", "_self");
+    window.open("https://taskmanagerapp-qc92.onrender.com/auth/google/callback", "_self");
   };
   return (
     <div className="flex min-h-screen items-center justify-center bg-gray-100">
