@@ -63,7 +63,7 @@ const loginUser = async (req, res) => {
     }
 
     if (!user.password) {
-      return res.status(200).json({ redirectTo: "http://localhost:8000/auth/google" });
+      return res.status(200).json({ redirectTo: "https://taskmanagerapp-qc92.onrender.com/auth/google" });
     }
 
     const isMatch = await bcrypt.compare(password, user.password);
