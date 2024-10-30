@@ -14,11 +14,11 @@ router.get(
   (req, res, next) => {
     passport.authenticate("google", (err, user, info) => {
       if (err || !user) {
-        return res.redirect("https://legendary-froyo-d5c176.netlify.app/login");
+        return res.redirect("https://task-manager-app-hazel-nu.vercel.app/login");
       }
       req.logIn(user, { session: false }, (err) => {
         if (err) {
-          return res.redirect("https://legendary-froyo-d5c176.netlify.app/login");
+          return res.redirect("https://task-manager-app-hazel-nu.vercel.app/login");
         }
         next();
       });
@@ -32,7 +32,7 @@ router.get(
     );
 
     return res.redirect(
-      `https://legendary-froyo-d5c176.netlify.app?token=${token}&user=${JSON.stringify(req.user)}`
+      `https://task-manager-app-hazel-nu.vercel.app?token=${token}&user=${JSON.stringify(req.user)}`
     );
   }
 );
